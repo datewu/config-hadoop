@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+  <property>
+    <name>hbase.rootdir</name>
+    <value>hdfs://hdfs-k8s/hbase</value>
+  </property>
+  <property>
+    <name>hbase.cluster.distributed</name>
+    <value>true</value>
+  </property>
+  <property>
+    <name>hbase.zookeeper.quorum</name>
+    <value>zk-zookeeper-0.zk-zookeeper-headless.default.svc.cluster.local:2181,zk-zookeeper-1.zk-zookeeper-headless.default.svc.cluster.local:2181,zk-zookeeper-2.zk-zookeeper-headless.default.svc.cluster.local:2181</value>
+  </property>
+  <property>
+    <name>hbase.zookeeper.property.datadir</name>
+    <value>/var/zookeeper</value>
+  </property>
+</configuration>
